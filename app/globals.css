@@ -1,26 +1,124 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.font-logo {
+  font-family: var(--font-alex-brush), cursive;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.font-calligraphy {
+  font-family: var(--font-calligraphy), cursive;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.font-editorial {
+  font-family: var(--font-bodoni), serif;
+}
+
+.font-sans-clean {
+  font-family: var(--font-montserrat), sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FDFBF7;
+  color: #0F172A;
+  font-family: var(--font-calligraphy), cursive;
+}
+
+header, footer {
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+/* Animations εισόδου */
+
+/* 1. Πέφτει από πάνω προς τα κάτω */
+@keyframes dropFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 2. Έρχεται από αριστερά προς τα δεξιά */
+@keyframes slideFromLeftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-90px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 3. Έρχεται από δεξιά προς τα αριστερά */
+@keyframes slideFromRightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(90px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 4. Απαλό ανέβασμα από κάτω */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 5. Smooth & Seamless Infinite Scroll (GPU Accelerated) */
+@keyframes scrollLeftSmooth {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* Animation Classes */
+.animate-drop-top,
+.animate-slide-down {
+  opacity: 0;
+  animation: dropFromTop 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-left-to-right,
+.animate-slide-left {
+  opacity: 0;
+  animation: slideFromLeftToRight 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-right-to-left,
+.animate-slide-right {
+  opacity: 0;
+  animation: slideFromRightToLeft 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Infinite Carousel Utilities */
+.animate-infinite-scroll {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: scrollLeftSmooth 85s linear infinite; /* Πιο αργή και ομαλή κίνηση */
+}
+
+.pause-on-hover:hover,
+.pause-on-hover:active {
+  animation-play-state: paused;
 }
