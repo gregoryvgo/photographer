@@ -5,7 +5,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-[#FDFBF7]/90 backdrop-blur-md border-b border-[#D1C2A5]/30 font-sans-clean">
       <nav className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <Link href="/" className="font-logo text-3xl text-[#0F172A]">
-          Artistic Lens 
+          Photgraphy Lensium 
         </Link>
         <div className="flex gap-8 text-lg font-medium text-[#0F172A] font-sans-clean">
           <Link href="/" className="hover:text-[#D1C2A5] transition">Αρχική</Link>

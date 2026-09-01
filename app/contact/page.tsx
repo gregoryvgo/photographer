@@ -32,7 +32,7 @@ export default function ContactPage() {
           >
             <div>
               <h2 className="font-calligraphy text-3xl md:text-4xl text-[#E8DEC8] mb-6">
-                Artistic Lens
+                Photgraphy Lensium
               </h2>
               <div className="space-y-6 font-sans-clean text-sm">
                 <div>

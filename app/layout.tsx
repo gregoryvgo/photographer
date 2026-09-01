@@ -30,7 +30,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Artistic Lens Photography",
+  title: "Photgraphy Lensium",
   description: "Φωτογραφίες γάμου και βάπτισης γεμάτες συναίσθημα.",
 };
 

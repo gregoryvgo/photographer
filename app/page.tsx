@@ -90,7 +90,7 @@ export default function HomePage() {
       <section className="relative w-full min-h-[85vh] flex items-center justify-center text-center px-6 py-20 overflow-hidden">
         <Image
           src="/images/hero.webp"
-          alt="Artistic Lens Hero"
+          alt="Photgraphy Lensium Hero"
           fill
           priority
           className="object-cover object-center brightness-[0.45]"
@@ -101,7 +101,7 @@ export default function HomePage() {
 
         <div className="relative z-10 max-w-5xl mx-auto animate-drop-top text-white">
           <p className="font-sans-clean text-xs md:text-sm tracking-[0.4em] uppercase text-[#E8DEC8] font-light mb-4 drop-shadow">
-            ARTISTIC LENS PHOTOGRAPHY
+            Photgraphy Lensium
           </p>
 
           <h1 className="font-calligraphy text-5xl sm:text-7xl md:text-8xl text-[#FDFBF7] mb-6 drop-shadow-lg leading-tight">
